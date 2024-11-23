@@ -133,12 +133,17 @@ label {
 }
 
 .navbar {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1em;
     background-color: #505050;
     padding-top: 2vw;
     padding-bottom: 2vw;
+    justify-content: center;
+}
+
+.nav-contents {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    margin: auto;
 }
 
 /*
@@ -218,6 +223,9 @@ Text color for navbar hovered: #ffffff
         padding-top: 5vw;
         padding-bottom: 5vw;
     }
+    .nav-contents {
+        grid-template-columns: 1fr;
+    }
     .nav-home {
         text-align: center;
     }
@@ -228,9 +236,12 @@ Text color for navbar hovered: #ffffff
 
 @media screen  and (min-width: 350px) and (max-width: 640px) {
     .navbar {
-        grid-template-columns: 1fr;
         padding-top: 3.5vw;
         padding-bottom: 3.5vw;
+    }
+    .nav-contents {
+        grid-template-columns: 1fr;
+        gap: 0.5em;
     }
     .nav-home {
         text-align: center;
@@ -252,6 +263,9 @@ Text color for navbar hovered: #ffffff
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1600px) {
+    .nav-contents {
+        max-width: 1280px;
+    }
     .section-body {
         margin-left: auto;
         margin-right: auto;
@@ -260,6 +274,9 @@ Text color for navbar hovered: #ffffff
 }
 
 @media screen and (min-width: 1600px) {
+    .nav-contents {
+        max-width: 1520px;
+    }
     .section-body {
         margin-left: auto;
         margin-right: auto;
