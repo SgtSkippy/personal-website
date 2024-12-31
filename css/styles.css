@@ -114,6 +114,11 @@ label {
     padding-bottom: 1em;
 }
 
+.project-links {
+    margin: 0em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
 
 .section-body {
     align-self: center;
@@ -215,6 +220,69 @@ Text color for navbar hovered: #ffffff
 .resume-link:hover {
     background-color: #ffffff;
     color: #000000;
+}
+
+.media-link {
+    background-color: #0f0f0f;
+    border: solid;
+    border-radius: 8px;
+    border-width: 1px;
+    color: #f0f0f0;
+    cursor: pointer;
+    padding-top: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 0.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition-duration: 0.3s;
+}
+
+.media-link:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#project_searchengine {
+    .project-subtext {
+        display: none
+    }
+}
+
+#project_starcraft {
+    .project-subtext {
+        display: none
+    }
+}
+
+#project_sleeptracker {
+    .project-subtext {
+        display: none
+    }
+}
+
+#project_coachsays {
+    .project-subtext {
+        display: none
+    }
+}
+
+#project_spotify {
+    .project-subtext {
+        display: none
+    }
+}
+
+#project_tweet {
+    .project-subtext {
+        display: none
+    }
+}
+
+#project_minesweeper {
+    .project-subtext {
+        display: none
+    }
 }
 
 @media screen and (max-width: 350px) {
