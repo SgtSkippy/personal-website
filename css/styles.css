@@ -243,6 +243,43 @@ Text color for navbar hovered: #ffffff
     color: #000000;
 }
 
+.media-close {
+    background-color: #0f0f0f;
+    border: solid;
+    border-radius: 8px;
+    border-width: 1px;
+    color: #f0f0f0;
+    cursor: pointer;
+    padding-top: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 0.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition-duration: 0.3s;
+}
+
+.media-close:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.mediaWindow-overlay {
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.media-window {
+    display: none;
+    position: fixed;
+    background-color: #ffffff;
+    width: 300px;
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px black;
+    padding: 1em;
+}
+
 #project_searchengine {
     .project-subtext {
         display: none
