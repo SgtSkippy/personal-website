@@ -268,16 +268,27 @@ Text color for navbar hovered: #ffffff
     display: none;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
 }
 
 .media-window {
     display: none;
     position: fixed;
-    background-color: #ffffff;
-    width: 300px;
-    border: 1px solid black;
-    box-shadow: 10px 5px 5px black;
-    padding: 1em;
+    background-color: #0f0f0f;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: auto;
+    margin-right: auto;
+    height: 50%;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25em;
+    border: 1px solid white;
 }
 
 #project_searchengine {
