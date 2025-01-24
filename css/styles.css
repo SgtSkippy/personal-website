@@ -283,12 +283,34 @@ Text color for navbar hovered: #ffffff
     transform: translate(-50%, -50%);
     margin-left: auto;
     margin-right: auto;
-    height: 50%;
-    width: 50%;
+    height: 75vh;
+    width: 85vw;
+    border-radius: 3px;
+    grid-template-rows: 80% 20%;
     align-items: center;
-    justify-content: center;
     padding: 1.25em;
     border: 1px solid white;
+}
+
+.media-space {
+    justify-self: center;
+    background-color: #505050;
+    height: 100%;
+    width: 100%;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    align-content: center;
+    text-align: center;
+}
+
+.media-previewBar {
+    justify-self: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    align-content: center;
+    text-align: center;
 }
 
 #project_searchengine {
