@@ -313,6 +313,26 @@ Text color for navbar hovered: #ffffff
     text-align: center;
 }
 
+.media-files {
+
+}
+
+.media-button {
+
+}
+
+.media-button.left {
+
+}
+
+.media-button.right {
+
+}
+
+.media-dots {
+
+}
+
 #project_searchengine {
     .project-subtext {
         display: none
