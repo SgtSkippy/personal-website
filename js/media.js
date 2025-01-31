@@ -32,22 +32,86 @@ function displayMediaWindow() {
     });
 };
 
+// FIXME: All images/videos currently show up in the same slide
 // Loads images/videos for all projects
 function loadProjectMedia(project) {
-    const media = project.querySelector(".media-files");        // FIXME: project catches a type error
-    const mediaContent = project.querySelectorAll(".media-files img, .media-files video");
-    const previousButton = project.querySelector(".media-button.left");
-    const nextButton = project.querySelector(".media-button.right");
-    const dotsContainer = project.querySelector(".media-dots");
+    const media = project.querySelector(".media-files");                                        // Grabs media file container
+    const mediaContent = project.querySelectorAll(".media-files img, .media-files video");      // Grabs list of media files
+    const previousButton = project.querySelector(".media-button.left");                         // Grabs left media button
+    const nextButton = project.querySelector(".media-button.right");                            // Grabs right media button
+    const dotsContainer = project.querySelector(".media-dots");                                 // Grabs the container for media dot illustration
+    let currentIndex = 0;
 
-    // TODO: Implement changing and updating media, generating dots for media count, and adding listeners to buttons
+    // If no media is available, stop initializing
+    if (mediaContent.length === 0) {
+        console.warn("No media found for the following project: ", project);
+        return;
+    };
+
+    // Illustrate dots for media
+    mediaContent.forEach((_, index) => {
+        const dot = document.createElement("div");
+        dot.classList.add("media-dot");
+        // Set first media as active
+        if (index === 0) {
+            dot.classList.add("active");
+        }
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = project.querySelectorAll(".media-dot");        // Grab each dot after they've been created
+
+    function updateMediaWindow() {
+        // Moves media slides
+        media.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        // Video handler
+        mediaContent.forEach((mediaFile, index) => {
+            if (mediaFile.tagName === "video") {
+                // Pauses video if not currently selected
+                if (index !== currentIndex) {
+                    mediaFile.pause();
+                };
+            };
+        });
+
+        // Update dots
+        dots.forEach((dot, index) => {
+            dot.classList.toggle("active", index === currentIndex);
+        });
+    };
+
+    function showNextSlide() {
+        currentIndex = (currentIndex + 1) % mediaContent.length;    // Loops to start
+        updateMediaWindow();
+    };
+
+    function showPrevSlide() {
+        currentIndex = (currentIndex - 1 + mediaContent.length) % mediaContent.length;      // Loops to end
+        updateMediaWindow();
+    };
+
+    // Event listener for buttons
+    nextButton.addEventListener("click", showNextSlide);
+    previousButton.addEventListener("click", showPrevSlide);
+
+    // Event listener for dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+            currentIndex = index;
+            updateMediaWindow();
+        });
+    });
+
+    // Initialize first media display
+    updateMediaWindow();
 };
 
 // Initializes all project media
-const projectMedia = document.querySelectorAll(".media-space");     // Grabs all media space from each project
-projectMedia.forEach(project => {
-    loadProjectMedia(project);
-});
-
 document.addEventListener("DOMContentLoaded", displayMediaWindow);
-document.addEventListener("DOMContentLoaded", loadProjectMedia);
+document.addEventListener("DOMContentLoaded", () => {
+    const projectMedia = document.querySelectorAll(".media-space");     // Grabs all media space from each project media window
+    projectMedia.forEach(project => {
+        loadProjectMedia(project);
+    });
+});
