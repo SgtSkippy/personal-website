@@ -2,32 +2,43 @@
 function displayMediaWindow() {
     const mediaBtn_open = document.querySelectorAll(".media-link");     // Grabs all media buttons
     const mediaBtn_close = document.querySelectorAll(".media-close");   // Grabs all close buttons
-    const mediaOverlay = document.getElementById("mediaOverlay");
+    const mediaOverlay = document.getElementById("mediaOverlay");       // Grabs overlay container
+    const mediaScreen_width = window.matchMedia("(max-width: 640px)");  // Grabs window width
+    const navbar = document.getElementById("navbar");                   // Grabs top navigation bar
 
     // Media button handler
     mediaBtn_open.forEach(button => {
+        // On click, display media window and overlay
         button.addEventListener("click", () => {
             const mediaId = button.getAttribute("data-popup-id");
             const mediaWindow = document.getElementById(mediaId);
             mediaWindow.style.display = "grid";
             mediaOverlay.style.display = "grid";
+            // If window is small, close nav bar
+            if (mediaScreen_width.matches) {
+                navbar.style.display = "none";
+            };
         });
     });
 
     // Media window close button handler
     mediaBtn_close.forEach(button => {
+        // On click, close media window and overlay
         button.addEventListener("click", () => {
             const mediaWindow = button.closest(".media-window");
             mediaWindow.style.display = "none";
             mediaOverlay.style.display = "none";
+            navbar.style.display = "block";
         });
     });
 
     // Overlay close handler
+    // Upon clicking the overlay, close media window and overlay
     mediaOverlay.addEventListener("click", () => {
         document.querySelectorAll(".media-window").forEach(mediaWindow => {
             mediaWindow.style.display = "none";
             mediaOverlay.style.display = "none";
+            navbar.style.display = "block";
         });
     });
 };

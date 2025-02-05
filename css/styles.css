@@ -138,6 +138,7 @@ label {
 }
 
 .navbar {
+    display: block;
     background-color: #505050;
     padding-top: 2vw;
     padding-bottom: 2vw;
@@ -336,7 +337,7 @@ Text color for navbar hovered: #ffffff
     cursor: pointer;
     z-index: 10;
     padding: 10px;
-    border-radius: 50%;
+    border-radius: 25%;
 }
 
 .media-button.left {
@@ -447,6 +448,10 @@ Text color for navbar hovered: #ffffff
     }
     .home-img {
         margin-top: 5em;
+    }
+    .media-window {
+        height: 100%;
+        width: 100%;
     }
 }
 
