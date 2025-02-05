@@ -32,7 +32,6 @@ function displayMediaWindow() {
     });
 };
 
-// FIXME: All images/videos currently show up in the same slide
 // Loads images/videos for all projects
 function loadProjectMedia(project) {
     const media = project.querySelector(".media-files");                                        // Grabs media file container
