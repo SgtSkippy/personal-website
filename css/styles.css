@@ -294,6 +294,7 @@ Text color for navbar hovered: #ffffff
 }
 
 .media-space {
+    display: flex;
     position: relative;
     justify-self: center;
     background-color: #505050;
@@ -324,6 +325,12 @@ Text color for navbar hovered: #ffffff
 .media-files div {
     width: 100%;
     flex-shrink: 0;
+    align-self: center;
+}
+
+.media-files video {
+    max-width: 100%;
+    height: auto;
 }
 
 .media-button {

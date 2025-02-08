@@ -43,6 +43,7 @@ function displayMediaWindow() {
     });
 };
 
+// TODO: Implement video pausing when media window is closed.
 // Loads images/videos for all projects
 function loadProjectMedia(project) {
     const media = project.querySelector(".media-files");                                        // Grabs media file container
@@ -50,6 +51,8 @@ function loadProjectMedia(project) {
     const previousButton = project.querySelector(".media-button.left");                         // Grabs left media button
     const nextButton = project.querySelector(".media-button.right");                            // Grabs right media button
     const dotsContainer = project.querySelector(".media-dots");                                 // Grabs the container for media dot illustration
+    const mediaBtn_close = document.querySelectorAll(".media-close");                           // Grabs all close buttons
+    const mediaOverlay = document.getElementById("mediaOverlay");                               // Grabs overlay container
     let currentIndex = 0;
 
     // If no media is available, stop initializing
@@ -77,8 +80,7 @@ function loadProjectMedia(project) {
 
         // Video handler
         mediaContent.forEach((mediaFile, index) => {
-            if (mediaFile.tagName === "video") {
-                // Pauses video if not currently selected
+            if (mediaFile.tagName == "VIDEO") {
                 if (index !== currentIndex) {
                     mediaFile.pause();
                 };
@@ -112,6 +114,9 @@ function loadProjectMedia(project) {
             updateMediaWindow();
         });
     });
+
+    // Event listner for when the media window is closed
+
 
     // Initialize first media display
     updateMediaWindow();
