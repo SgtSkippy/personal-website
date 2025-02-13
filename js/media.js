@@ -43,7 +43,6 @@ function displayMediaWindow() {
     });
 };
 
-// TODO: Implement video pausing when media window is closed.
 // Loads images/videos for all projects
 function loadProjectMedia(project) {
     const media = project.querySelector(".media-files");                                        // Grabs media file container
