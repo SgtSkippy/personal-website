@@ -48,6 +48,7 @@ function displayMediaWindow() {
 function loadProjectMedia(project) {
     const media = project.querySelector(".media-files");                                        // Grabs media file container
     const mediaContent = project.querySelectorAll(".media-files img, .media-files video");      // Grabs list of media files
+    const mediaContent_videos = project.querySelectorAll(".media-files video");                 // Grabs list of videos in media files
     const previousButton = project.querySelector(".media-button.left");                         // Grabs left media button
     const nextButton = project.querySelector(".media-button.right");                            // Grabs right media button
     const dotsContainer = project.querySelector(".media-dots");                                 // Grabs the container for media dot illustration
@@ -79,12 +80,8 @@ function loadProjectMedia(project) {
         media.style.transform = `translateX(-${currentIndex * 100}%)`;
 
         // Video handler
-        mediaContent.forEach((mediaFile, index) => {
-            if (mediaFile.tagName == "VIDEO") {
-                if (index !== currentIndex) {
-                    mediaFile.pause();
-                };
-            };
+        mediaContent_videos.forEach(video => {
+            video.pause();
         });
 
         // Update dots
@@ -116,7 +113,18 @@ function loadProjectMedia(project) {
     });
 
     // Event listner for when the media window is closed
-
+    mediaBtn_close.forEach(button => {
+        button.addEventListener("click", () => {
+            mediaContent_videos.forEach(video => {
+                video.pause();
+            });
+        });
+    });
+    mediaOverlay.addEventListener("click", () => {
+        mediaContent_videos.forEach(video => {
+            video.pause();
+        });
+    });
 
     // Initialize first media display
     updateMediaWindow();
