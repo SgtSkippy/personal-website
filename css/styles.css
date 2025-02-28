@@ -115,9 +115,11 @@ label {
 }
 
 .project-links {
+    display: flex;
     margin: 0em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+    gap: 1em;
 }
 
 .section-body {
@@ -231,6 +233,27 @@ Text color for navbar hovered: #ffffff
     color: #f0f0f0;
     cursor: pointer;
     padding-top: 0.5em;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+    padding-bottom: 0.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition-duration: 0.3s;
+}
+
+.media-link:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.media-github {
+    background-color: #0f0f0f;
+    border: solid;
+    border-radius: 8px;
+    border-width: 1px;
+    color: #f0f0f0;
+    cursor: pointer;
+    padding-top: 0.5em;
     padding-left: 1em;
     padding-right: 1em;
     padding-bottom: 0.5em;
@@ -239,7 +262,7 @@ Text color for navbar hovered: #ffffff
     transition-duration: 0.3s;
 }
 
-.media-link:hover {
+.media-github:hover {
     background-color: #ffffff;
     color: #000000;
 }

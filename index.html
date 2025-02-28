@@ -88,6 +88,9 @@ WRITTEN BY: Dylan Padua
                         <button id="template_mediaBtn" class="media-link" 
                             data-project-id="project_template" data-popup-id="template_mediaWindow">Media
                         </button>
+                        <button id="template_githubBtn" class="media-github"
+                            onclick="window.open('about:blank', '_blank')">GitHub
+                        </button>
                     </section>
                     <div id="mediaOverlay" class="mediaWindow-overlay"></div>
                     <section id="template_mediaWindow" class="media-window">
@@ -98,7 +101,7 @@ WRITTEN BY: Dylan Padua
                                 <div><img id="template_media_3" src="img/project_template/placeholder3.png" alt="Template Image 3"></div>
                                 <div><img id="template_media_4" src="img/project_template/placeholder4.png" alt="Template Image 4"></div>
                                 <div><img id="template_media_5" src="img/project_template/placeholder-1920x860.png" alt="Template Image 5"></div>
-                                <div><video id="template_media_6" controls disablepictureinpicture controlslist="nodownload">
+                                <div><video id="template_media_6" controls disablepictureinpicture controlslist="nodownload" preload="metadata">
                                     <source src="img/project_template/ForBiggerEscapes.mp4" type="video/mp4">
                                     An error has occurred while loading the video.
                                 </video></div>
