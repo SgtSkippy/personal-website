@@ -435,7 +435,10 @@ Text color for navbar hovered: #ffffff
 
 #project_spotify {
     .project-subtext {
-        display: none
+        display: none;
+    }
+    .media-github {
+        display: none;
     }
 }
 

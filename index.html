@@ -171,6 +171,33 @@ WRITTEN BY: Dylan Padua
                     <p class="project-bodytext">
                         Web application built using Angular that uses a backend server written in Node.js/Express to browse music on Spotify.
                     </p>
+                    <section class="project-links">
+                        <button id="spotify_mediaBtn" class="media-link" 
+                            data-project-id="project_spotify" data-popup-id="spotify_mediaWindow">Media
+                        </button>
+                        <button id="spotify_githubBtn" class="media-github"
+                            onclick="window.open('about:blank', '_blank')">GitHub
+                        </button>
+                    </section>
+                    <section id="spotify_mediaWindow" class="media-window">
+                        <section id="spotify_mediaSpace" class="media-space">
+                            <section id="spotify_media" class="media-files">
+                                <div><img id="spotify_media_1" src="img/project_spotify/Spotify Browser Profile Page.jpg" alt="Spotify Profile Page"></div>
+                                <div><img id="spotify_media_2" src="img/project_spotify/Spotify Browser Artist Page.jpg" alt="Spotify Artist Page"></div>
+                                <div><img id="spotify_media_3" src="img/project_spotify/Spotify Browser Album Page.jpg" alt="Spotify Album Page"></div>
+                                <div><video id="spotify_media_4" controls disablepictureinpicture controlslist="nodownload" preload="metadata">
+                                    <source src="img/project_spotify/Spotify Browser Demo.mp4" type="video/mp4">
+                                    An error has occurred while loading the video.
+                                </video></div>
+                            </section>
+                            <button class="media-button left">&lt;</button>
+                            <button class="media-button right">&gt;</button>
+                            <div class="media-dots"></div>
+                        </section>
+                        <section id="spotify_mediaPreview" class="media-previewBar">
+                            <button id="spotify_mediaCloseBtn" class="media-close">Close</button>
+                        </section>
+                    </section>
                 </section>
             </article>
             <article id="project_tweet" class="project-body">
@@ -196,7 +223,7 @@ WRITTEN BY: Dylan Padua
                                 <div><img id="tweet_media_1" src="img/project_tweet/Tweet Report About.jpg" alt="Tweet Report About Page"></div>
                                 <div><img id="tweet_media_2" src="img/project_tweet/Tweet Report Activity Means.jpg" alt="Tweet Report Activity Page (Mean Values)"></div>
                                 <div><img id="tweet_media_3" src="img/project_tweet/Tweet Report Activity Total.jpg" alt="Tweet Report Activity Page (Total Values)"></div>
-                                <div><video id="tweet_media_6" controls disablepictureinpicture controlslist="nodownload" preload="metadata">
+                                <div><video id="tweet_media_4" controls disablepictureinpicture controlslist="nodownload" preload="metadata">
                                     <source src="img/project_tweet/Tweet Report Demo.mp4" type="video/mp4">
                                     An error has occurred while loading the video.
                                 </video></div>
