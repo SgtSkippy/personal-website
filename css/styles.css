@@ -342,6 +342,7 @@ Text color for navbar hovered: #ffffff
 
 .media-files {
     display: flex;
+    flex: auto;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -446,7 +447,10 @@ Text color for navbar hovered: #ffffff
 
 #project_minesweeper {
     .project-subtext {
-        display: none
+        display: none;
+    }
+    .media-github {
+        display: none;
     }
 }
 
