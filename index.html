@@ -182,6 +182,33 @@ WRITTEN BY: Dylan Padua
                     <p class="project-bodytext">
                         Web application built using TypeScript that analyzes a series of Tweets posted from the RunKeeper app and produces a report.
                     </p>
+                    <section class="project-links">
+                        <button id="tweet_mediaBtn" class="media-link" 
+                            data-project-id="project_tweet" data-popup-id="tweet_mediaWindow">Media
+                        </button>
+                        <button id="tweet_githubBtn" class="media-github"
+                            onclick="window.open('about:blank', '_blank')">GitHub
+                        </button>
+                    </section>
+                    <section id="tweet_mediaWindow" class="media-window">
+                        <section id="tweet_mediaSpace" class="media-space">
+                            <section id="tweet_media" class="media-files">
+                                <div><img id="tweet_media_1" src="img/project_tweet/Tweet Report About.jpg" alt="Tweet Report About Page"></div>
+                                <div><img id="tweet_media_2" src="img/project_tweet/Tweet Report Activity Means.jpg" alt="Tweet Report Activity Page (Mean Values)"></div>
+                                <div><img id="tweet_media_3" src="img/project_tweet/Tweet Report Activity Total.jpg" alt="Tweet Report Activity Page (Total Values)"></div>
+                                <div><video id="tweet_media_6" controls disablepictureinpicture controlslist="nodownload" preload="metadata">
+                                    <source src="img/project_tweet/Tweet Report Demo.mp4" type="video/mp4">
+                                    An error has occurred while loading the video.
+                                </video></div>
+                            </section>
+                            <button class="media-button left">&lt;</button>
+                            <button class="media-button right">&gt;</button>
+                            <div class="media-dots"></div>
+                        </section>
+                        <section id="tweet_mediaPreview" class="media-previewBar">
+                            <button id="tweet_mediaCloseBtn" class="media-close">Close</button>
+                        </section>
+                    </section>
                 </section>
             </article>
             <article id="project_minesweeper" class="project-body">
@@ -195,13 +222,12 @@ WRITTEN BY: Dylan Padua
                     </p>
                     <section class="project-links">
                         <button id="minesweeper_mediaBtn" class="media-link" 
-                            data-project-id="project_template" data-popup-id="minesweeper_mediaWindow">Media
+                            data-project-id="project_minesweeper" data-popup-id="minesweeper_mediaWindow">Media
                         </button>
                         <button id="minesweeper_githubBtn" class="media-github"
                             onclick="window.open('about:blank', '_blank')">GitHub
                         </button>
                     </section>
-                    
                     <section id="minesweeper_mediaWindow" class="media-window">
                         <section id="minesweeper_mediaSpace" class="media-space">
                             <section id="minesweeper_media" class="media-files">

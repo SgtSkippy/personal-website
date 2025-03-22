@@ -441,7 +441,10 @@ Text color for navbar hovered: #ffffff
 
 #project_tweet {
     .project-subtext {
-        display: none
+        display: none;
+    }
+    .media-github {
+        display: none;
     }
 }
 
