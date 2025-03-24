@@ -425,11 +425,29 @@ Text color for navbar hovered: #ffffff
     .project-subtext {
         display: none
     }
+    .media-github {
+        display: none;
+    }
+    .media-button {
+        display: none;
+    }
+    .media-dots {
+        display: none;
+    }
 }
 
 #project_coachsays {
     .project-subtext {
         display: none
+    }
+    .media-github {
+        display: none;
+    }
+    .media-button {
+        display: none;
+    }
+    .media-dots {
+        display: none;
     }
 }
 
@@ -456,6 +474,12 @@ Text color for navbar hovered: #ffffff
         display: none;
     }
     .media-github {
+        display: none;
+    }
+    .media-button {
+        display: none;
+    }
+    .media-dots {
         display: none;
     }
 }
