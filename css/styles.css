@@ -419,6 +419,9 @@ Text color for navbar hovered: #ffffff
     .project-subtext {
         display: none
     }
+    .media-link {
+        display: none;
+    }
 }
 
 #project_sleeptracker {
