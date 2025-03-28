@@ -56,7 +56,14 @@ label {
 
 .home-img {
     position: relative;
-    margin-top:3.5em;
+    margin-top: 4vw;
+    justify-self: center;
+}
+
+.portrait {
+    border-radius: 50%;
+    width: 15em;
+    margin-top: 3em;
 }
 
 .foot-links {
