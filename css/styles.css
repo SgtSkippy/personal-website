@@ -85,12 +85,15 @@ label {
     margin: 0em;
     text-align: center;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 .project-body {
     display: flex;
     padding-top: 2em;
     padding-bottom: 2em;
+    border-top: 1px solid;
+    border-color: #808080;
 }
 
 .project-desc {
@@ -100,6 +103,7 @@ label {
 .project-head {
     font-size: 2em;
     margin: 0;
+    font-weight: bold;
 }
 
 .project-img {
@@ -327,7 +331,7 @@ Text color for navbar hovered: #ffffff
     display: flex;
     position: relative;
     justify-self: center;
-    background-color: #505050;
+    background-color: #2d2d2d;
     height: 100%;
     width: 100%;
     margin-top: 1vh;
@@ -416,6 +420,10 @@ Text color for navbar hovered: #ffffff
     background-color: lightgray;
 }
 
+#project_subhead {
+    padding-bottom: 0.67em;
+}
+
 #project_searchengine {
     .project-subtext {
         display: none
@@ -480,6 +488,8 @@ Text color for navbar hovered: #ffffff
 }
 
 #project_minesweeper {
+    border-bottom: 1px solid;
+    border-color: #808080;
     .project-subtext {
         display: none;
     }

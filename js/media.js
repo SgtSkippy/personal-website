@@ -5,6 +5,7 @@ function displayMediaWindow() {
     const mediaOverlay = document.getElementById("mediaOverlay");       // Grabs overlay container
     const mediaScreen_width = window.matchMedia("(max-width: 640px)");  // Grabs window width
     const navbar = document.getElementById("navbar");                   // Grabs top navigation bar
+    const body = document.body;                                         // Grabs page body
 
     // Media button handler
     mediaBtn_open.forEach(button => {
@@ -14,6 +15,7 @@ function displayMediaWindow() {
             const mediaWindow = document.getElementById(mediaId);
             mediaWindow.style.display = "grid";
             mediaOverlay.style.display = "grid";
+            body.style.overflow = "hidden";
             // If window is small, close nav bar
             if (mediaScreen_width.matches) {
                 navbar.style.display = "none";
@@ -29,6 +31,7 @@ function displayMediaWindow() {
             mediaWindow.style.display = "none";
             mediaOverlay.style.display = "none";
             navbar.style.display = "block";
+            body.style.overflow = "auto";
         });
     });
 
@@ -39,6 +42,7 @@ function displayMediaWindow() {
             mediaWindow.style.display = "none";
             mediaOverlay.style.display = "none";
             navbar.style.display = "block";
+            body.style.overflow = "auto";
         });
     });
 };
