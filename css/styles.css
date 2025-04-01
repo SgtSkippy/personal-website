@@ -156,6 +156,7 @@ label {
     padding-top: 2vw;
     padding-bottom: 2vw;
     justify-content: center;
+    z-index: 2;
 }
 
 .nav-contents {
@@ -307,6 +308,7 @@ Text color for navbar hovered: #ffffff
     left: 0;
     height: 100%;
     width: 100%;
+    z-index: 3;
 }
 
 .media-window {
@@ -325,6 +327,7 @@ Text color for navbar hovered: #ffffff
     align-items: center;
     padding: 1.25em;
     border: 1px solid white;
+    z-index: 4;
 }
 
 .media-space {
