@@ -221,7 +221,7 @@ Text color for navbar hovered: #ffffff
     border-width: 1px;
     color: #f0f0f0;
     cursor: pointer;
-    display: flex;
+    display: none;
     font-size: 1em;
     justify-content: center;
     margin: 1em 2em;
@@ -423,7 +423,15 @@ Text color for navbar hovered: #ffffff
     background-color: lightgray;
 }
 
+#about_subhead {
+    padding-bottom: 0.67em;
+}
+
 #project_subhead {
+    padding-bottom: 0.67em;
+}
+
+#contact_subhead {
     padding-bottom: 0.67em;
 }
 
