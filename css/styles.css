@@ -50,6 +50,30 @@ label {
     padding-bottom: 1em;
 }
 
+.about-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.about-link {
+    border: 1px solid;
+    border-radius: 8px;
+    color: #ffffff;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    font-size: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+}
+
+.about-link:hover {
+    color: #000000;
+    background-color: #ffffff;
+}
+
 .email-body {
     padding-bottom: 2vw;
 }
@@ -74,10 +98,16 @@ label {
     padding-bottom: 2vw;
 }
 
+.copyright {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
 .link-button {
     margin-left: 1em;
     margin-right: 1em;
-    font-size: 1.75rem;
+    font-size: 2em;
 }
 
 .page-subhead {
