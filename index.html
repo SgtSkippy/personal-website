@@ -72,12 +72,13 @@ WRITTEN BY: Dylan Padua
                     <i class="fa-brands fa-github"></i>
                 </a>
             </div>
-            <a id="resumebtn" class="resume-link" href="img/placeholder.png" target="_blank">Resume</a>
+            <a id="resumebtn" class="resume-link" target="_blank">Resume</a>
         </section>
 
         <!-- Projects Section -->
         <section id="project" class="section-body">
             <h2 id="project_subhead" class="page-subhead">Projects</h2>
+            <div id="mediaOverlay" class="mediaWindow-overlay"></div>
             <article id="project_template" class="project-body">
                 <section class="project-desc">
                     <h3 class="project-head">Project Name</h3>
@@ -98,16 +99,12 @@ WRITTEN BY: Dylan Padua
                             onclick="window.open('about:blank', '_blank')">GitHub
                         </button>
                     </section>
-                    <div id="mediaOverlay" class="mediaWindow-overlay"></div>
                     <section id="template_mediaWindow" class="media-window">
                         <section id="template_mediaSpace" class="media-space">
                             <section id="template_media" class="media-files">
                                 <div><img id="template_media_1" src="img/project_template/placeholder1.png" alt="Template Image 1"></div>
-                                <div><img id="template_media_2" src="img/project_template/placeholder2.png" alt="Template Image 2"></div>
-                                <div><img id="template_media_3" src="img/project_template/placeholder3.png" alt="Template Image 3"></div>
-                                <div><img id="template_media_4" src="img/project_template/placeholder4.png" alt="Template Image 4"></div>
-                                <div><img id="template_media_5" src="img/project_template/placeholder-1920x860.png" alt="Template Image 5"></div>
-                                <div><video id="template_media_6" controls disablepictureinpicture controlslist="nodownload" preload="metadata">
+                                <div><img id="template_media_2" src="img/project_template/placeholder-1920x860.png" alt="Template Image 2"></div>
+                                <div><video id="template_media_3" controls disablepictureinpicture controlslist="nodownload" preload="metadata">
                                     <source src="img/project_template/ForBiggerEscapes.mp4" type="video/mp4">
                                     An error has occurred while loading the video.
                                 </video></div>
@@ -195,8 +192,8 @@ WRITTEN BY: Dylan Padua
                         Project Subtext
                     </h4>
                     <p class="project-bodytext">
-                        Health-centric iOS application built using Swift. Allows users to log their food and water intake while 
-                        offering recommendations based on the data entered.
+                        Health-centric iOS application built using Swift. Allows users to log their food and water intake, then produces recommendations based on
+                        the user's given data.
                     </p>
                     <section class="project-links">
                         <button id="coachsays_mediaBtn" class="media-link" 

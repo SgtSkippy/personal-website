@@ -350,10 +350,10 @@ Text color for navbar hovered: #ffffff
     transform: translate(-50%, -50%);
     margin-left: auto;
     margin-right: auto;
-    height: 75vh;
+    height: 85vh;
     width: 85vw;
     border-radius: 3px;
-    grid-template-rows: 85% 15%;
+    grid-template-rows: 90% 10%;
     align-items: center;
     padding: 1.25em;
     border: 1px solid white;
@@ -465,6 +465,10 @@ Text color for navbar hovered: #ffffff
     padding-bottom: 0.67em;
 }
 
+#project_template {
+    display: none;
+}
+
 #project_searchengine {
     .project-subtext {
         display: none
@@ -560,6 +564,14 @@ Text color for navbar hovered: #ffffff
     .nav-selection {
         display: none;
     }
+    .media-window {
+        height: 100%;
+        width: 100%;
+    }
+    .foot-links {
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+    }
 }
 
 @media screen  and (min-width: 350px) and (max-width: 640px) {
@@ -578,11 +590,15 @@ Text color for navbar hovered: #ffffff
         justify-content: center;
     }
     .home-img {
-        margin-top: 5em;
+        margin-top: 4em;
     }
     .media-window {
         height: 100%;
         width: 100%;
+    }
+    .foot-links {
+        padding-top: 3.5vw;
+        padding-bottom: 3.5vw;
     }
 }
 
